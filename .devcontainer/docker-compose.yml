@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+    NextJs:
+        build: .
+        volumes:
+            - ./:/workspace
+            - ../.devcontainer:/workspace/.devcontainer
+        working_dir: /workspace
+        #command: node
+        tty: true
+        ports:
+            - 3000:3000
